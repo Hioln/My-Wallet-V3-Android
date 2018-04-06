@@ -109,16 +109,6 @@ class DashboardPresenter @Inject constructor(
                 )
     }
 
-    fun updateBalances() {
-
-        with(view) {
-            scrollToTop()
-        }
-
-        updatePrices()
-        updateAllBalances()
-    }
-
     override fun onViewDestroyed() {
         rxBus.unregister(MetadataEvent::class.java, metadataObservable)
         super.onViewDestroyed()
